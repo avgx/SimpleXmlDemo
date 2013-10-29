@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <language>ru</language>
+        <title>Lenta.ru : Новости</title>
+        <description>Новости, статьи, фотографии, видео. Семь дней в неделю, 24 часа в сутки</description>
+        <link>http://lenta.ru</link>
+        <image>
+            <url>http://assets.lenta.ru/small_logo.png</url>
+            <title>Lenta.ru</title>
+            <link>http://lenta.ru</link>
+            <width>134</width>
+            <height>22</height>
+        </image>
+        <atom:link rel="self" type="application/rss+xml" href="http://lenta.ru/rss"/>
+        <item>
+            <guid>http://lenta.ru/news/2013/10/29/runet/</guid>
+            <title>В Москве откроется выставка «Рунету — 20 лет!»</title>
+            <link>http://lenta.ru/news/2013/10/29/runet/</link>
+            <description>
+                <![CDATA[30 октября в пресс-центре РИА Новости откроется выставка, посвященная 20-летию Рунета. В рамках выставки «Рунету — 20 лет!» организаторами будет воссоздана хронология главных событий в истории развития Рунета с момента делегирования России домена .ru 7 апреля 1994 года и до сегодняшнего дня.]]>
+            </description>
+            <pubDate>Tue, 29 Oct 2013 14:52:57 +0400</pubDate>
+            <category>Интернет и СМИ</category>
+        </item>
+        <item>
+            <guid>http://lenta.ru/news/2013/10/29/dolphins/</guid>
+            <title>Ученые нашли новый вид дельфинов</title>
+            <link>http://lenta.ru/news/2013/10/29/dolphins/</link>
+            <description>
+                <![CDATA[Биологи смогли доказать то, что среди горбатых дельфинов есть представители ранее неизвестного вида. Ранее этих животных многократно наблюдали ученые, но ошибочно относили их к уже известным видам горбатых дельфинов из рода <i>Sousa</i>. Выделить новый вид удалось методами молекулярной биологии.]]>
+            </description>
+            <pubDate>Tue, 29 Oct 2013 14:45:00 +0400</pubDate>
+            <enclosure
+                    url="http://icdn.lenta.ru/images/2013/10/29/14/20131029145902082/pic_c50624ae03f5861f2888948e429edaab.jpg"
+                    length="34549" type="image/jpeg"/>
+            <category>Наука и техника</category>
+        </item>
+    </channel>
+</rss>

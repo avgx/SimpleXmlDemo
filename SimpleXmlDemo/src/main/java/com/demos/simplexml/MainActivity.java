@@ -6,12 +6,18 @@ import android.util.Log;
 import com.demos.simplexml.model.OperatingSystem;
 import com.demos.simplexml.model.OsReference;
 import com.demos.simplexml.model.Version;
+import com.demos.simplexml.rss.Channel;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
+import org.simpleframework.xml.transform.Matcher;
+import org.simpleframework.xml.transform.Transform;
 
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends Activity {
     private static final String TAG = "SimpleXmlDemo";
@@ -22,11 +28,33 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
 
-        //deserializeObject(getResources().openRawResource(R.raw.os));
-        serializeObject();
+        deserializeRss(getResources().openRawResource(R.raw.rss));
+        //deserializeOsReference(getResources().openRawResource(R.raw.os));
+        //serializeObject();
     }
 
-    private void deserializeObject(InputStream is) {
+    private void deserializeRss(InputStream is) {
+        Matcher matcher = new Matcher() {
+            @Override
+            public Transform match(Class aClass) throws Exception {
+                if (aClass == Calendar.class) {
+                    return new CalendarTransform();
+                }
+                return null;
+            }
+        };
+
+        Serializer serializer = new Persister(matcher);
+
+        try {
+            Channel result = serializer.read(Channel.class, is);
+            Log.d(TAG, "Deserializing OK");
+        } catch (Exception e) {
+            Log.e(TAG, "Error while parsing RSS", e);
+        }
+    }
+
+    private void deserializeOsReference(InputStream is) {
         Serializer serializer = new Persister();
 
         try {
@@ -51,6 +79,21 @@ public class MainActivity extends Activity {
             Log.d(TAG, writer.toString());
         } catch (Exception e) {
             Log.e(TAG, "Error while serializing", e);
+        }
+    }
+
+    public class CalendarTransform implements Transform<Calendar> {
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyy HH:mm:ss zzz", Locale.ENGLISH);
+
+        @Override
+        public Calendar read(String s) throws Exception {
+            Calendar c = Calendar.getInstance();
+            c.setTime(dateFormat.parse(s));
+            return c;
+        }
+        @Override
+        public String write(Calendar dateTime) throws Exception {
+            return dateFormat.format(dateTime.getTime());
         }
     }
 }

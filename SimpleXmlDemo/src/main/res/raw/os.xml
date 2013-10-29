@@ -1,0 +1,66 @@
+<operation_systems>
+    <desktop>
+        <os>
+            <title>Windows</title>
+            <company>
+                <name>Microsoft</name>
+                <website>http://www.microsoft.com</website>
+            </company>
+
+            <version codename="Chicago" year="1995">Windows 95</version>
+            <version codename="Memphis" year="1998">Windows 98</version>
+            <version year="2000">Windows ME</version>
+            <version codename="Cairo" year="2000">Windows 2000</version>
+            <version codename="Whistler" year="2001">Windows XP</version>
+            <version codename="Longhorn" year="2006">Windows Vista</version>
+            <version codename="Blackcomb" year="2009">Windows 7</version>
+            <version codename="Jupiter" year="2012">Windows 8</version>
+            <version year="2013">Windows 8.1</version>
+        </os>
+
+        <os>
+            <title>OS X</title>
+            <company>
+                <name>Apple</name>
+                <website>http://www.apple.com</website>
+            </company>
+
+            <version codename="Tiger" year="2005">10.4</version>
+            <version codename="Leopard" year="2007">10.5</version>
+            <version codename="Snow Leopard" year="2009">10.6</version>
+            <version codename="Lion" year="2011">10.7</version>
+            <version codename="Mountain Lion" year="2012">10.8</version>
+            <version codename="Mavericks" year="2013">10.9</version>
+        </os>
+    </desktop>
+
+    <mobile>
+        <os>
+            <title>Android</title>
+            <company>
+                <name>Google</name>
+                <website>http://google.com</website>
+            </company>
+
+            <version codename="Froyo" year="2010">2.2</version>
+            <version codename="Gingerbread" year="2010">2.3.x</version>
+            <version codename="Honeycomb" year="2011">3.x</version>
+            <version codename="Ice Cream Sandwich" year="2011">4.0</version>
+            <version codename="Jelly Bean" year="2012">4.1</version>
+            <version codename="Jelly Bean" year="2012">4.2</version>
+            <version codename="Jelly Bean" year="2013">4.3</version>
+        </os>
+
+        <os>
+            <title>Windows Phone</title>
+            <company>
+                <name>Microsoft</name>
+                <website>http://www.microsoft.com</website>
+            </company>
+
+            <version codename="Mango" year="2010">7.5</version>
+            <version codename="Tango" year="2011">7.8</version>
+            <version codename="Apollo" year="2012">8</version>
+        </os>
+    </mobile>
+</operation_systems>
